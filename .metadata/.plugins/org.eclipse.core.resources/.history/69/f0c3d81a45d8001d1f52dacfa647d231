@@ -1,0 +1,10 @@
+package com.ust.javaconfig;
+
+import org.springframework.context.annotation.Bean;
+
+public class AppConfig {
+	@Bean(name="helloBean")
+	public HelloWorld getBean() {
+		return new HelloWorldImpl();
+	}
+}

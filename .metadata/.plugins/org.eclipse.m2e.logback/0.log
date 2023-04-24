@@ -1,0 +1,4 @@
+2023-04-10 10:53:55,438 [Worker-0: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2023-04-12 12:39:01,454 [Worker-226: https://ftp.jaist.ac.jp/pub/eclipse/releases/2022-12/202212071000/plugins/org.eclipse.wildwebdeveloper_1.0.1.202211171559.jar] INFO  o.a.h.c.h.i.c.HttpRequestRetryExec - Recoverable I/O exception (org.apache.hc.core5.http.NoHttpResponseException) caught when processing request to {s}->https://ftp.jaist.ac.jp:443
+2023-04-12 12:41:55,684 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2023-04-12 12:43:57,040 [Worker-0: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.

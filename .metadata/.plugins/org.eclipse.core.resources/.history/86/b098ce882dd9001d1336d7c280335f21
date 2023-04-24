@@ -1,0 +1,22 @@
+package com.ust.practice;
+
+public class Median {
+	
+	public static void median(int data[],int len) {
+		if(data.length%2==0) {
+			System.out.println(data[len/2]-1);
+			
+		}
+		else {
+			System.out.println(data[len/2]);
+		}
+		
+	}
+	public static void main(String[] args) {
+		int []data= {1,2,4,5,9};
+		int len=data.length;
+		median(data,len);
+		
+	}
+
+}

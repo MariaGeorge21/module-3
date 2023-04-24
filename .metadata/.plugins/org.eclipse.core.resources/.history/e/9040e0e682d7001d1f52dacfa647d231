@@ -1,0 +1,15 @@
+package com.ust.ioc;
+
+import java.sql.DriverManager;
+
+public class DbConnection implements Connection {
+	private String url;
+	private String dbUserName;
+	private String dbPassword;
+	public  Connection getConnection() {
+		java.sql.Connection con=DriverManager.getConnection(url,dbUserName,dbPassword);
+		System.out.println("getConnection called");
+		return new DbConnection();
+	}
+
+}

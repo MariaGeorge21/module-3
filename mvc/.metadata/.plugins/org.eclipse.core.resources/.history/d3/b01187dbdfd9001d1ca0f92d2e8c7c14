@@ -1,0 +1,71 @@
+package com.ust.rest.repository;
+
+import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.Iterator;
+
+import com.ust.rest.resource.Product;
+
+public class ProductRepository {
+	private ArrayList<Product> productCache=new ArrayList<>();
+	
+	
+
+public ProductRepository() {
+	Product p1=new Product();
+	p1.setProductId(101);
+	p1.setName("Laptop");
+	p1.setDescription("Macbook Retina Eye");
+	p1.setPrice(new BigDecimal (10000));
+	p1.setQty(5);
+	productCache.add(p1);
+	
+	Product p2=new Product();
+	p2.setProductId(102);
+	p1.setName("Phone");
+	p1.setDescription("Galaxy m51");
+	p1.setPrice(new BigDecimal (90000));
+	p1.setQty(6);
+	productCache.add(p2);
+	
+	
+	Product p3=new Product();
+	p1.setProductId(103);
+	p1.setName("Mobile Phone");
+	p1.setDescription("Galaxy Note");
+	p1.setPrice(new BigDecimal (11000));
+	p1.setQty(5);
+	productCache.add(p3);
+	
+	Product p4=new Product();
+	p1.setProductId(104);
+	p1.setName("Mobile Phone");
+	p1.setDescription("iphone14");
+	p1.setPrice(new BigDecimal (112000));
+	p1.setQty(5);
+	productCache.add(p4);
+}
+	
+	public boolean addProduct(Product product) {
+		return productCache.add(product);
+	}
+	public Product getProduct(long productId) {
+		Iterator<Product>iter=productCache.iterator();
+		Product product=null;
+				while(iter.hasNext()) {
+					product=iter.next();
+					if(product.getProductId()==productId)
+					{
+						break;
+					}
+					if(product !=null){
+						return product;
+					}
+					else return null;
+					
+				}
+				return null;
+	}
+	
+
+}
