@@ -12,7 +12,7 @@
   springfox.documentation.spi.DocumentationType; import
   springfox.documentation.spring.web.plugins.Docket; import
   springfox.documentation.swagger2.annotations.EnableSwagger2;
- * //http://localhost:portNo/swagger-ui
+ //http://localhost:portNo/swagger-ui
   
   @Configuration
   

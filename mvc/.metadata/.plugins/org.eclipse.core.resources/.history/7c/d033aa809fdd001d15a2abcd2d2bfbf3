@@ -1,5 +1,0 @@
-package com.ust.rest.services.impl;
-
-public interface ProductServiceIface {
-
-}

@@ -27,17 +27,17 @@ public class ProductResource {
 	@Autowired
 	ProductService service;
 	  
-	  @GetMapping
+	  @GetMapping("/retrieve/{productId}")
 	  
-	 @RequestMapping("/retrieve/{productId}") public ResponseEntity<Product>
+	 public ResponseEntity<Product>
 	 fetchProduct(@PathVariable String productId) { 
 		  return ResponseEntity.ok(service.getProduct(productId));
 	  
 	  }
 	  
-	  @GetMapping
+	  @GetMapping("/retrieve/all")
 	  
-	  @RequestMapping("/retrieve/all") public ResponseEntity<List<Product>> fetchProducts(){
+	  public ResponseEntity<List<Product>> fetchProducts(){
 	  List<Product> list = service.getProducts();
 	  return ResponseEntity.ok(list);}
 	 
