@@ -20,7 +20,7 @@ public class ProductService {
 	UserRepository userRepository;
 	
 	 public Product getProduct(long productId) { 
-		 Optional<Product>optional=productRepository.findById(null);
+		 Optional<Product>optional=productRepository.findById(productId);
 		 if(optional.isPresent()) {
 			 return optional.get();
 		 }
@@ -59,10 +59,28 @@ public class ProductService {
 //	 }
 // }
 }
-	 public Product updateProduct(Product product) { return
-	  productRepository.save(product); 
-	 }
+	 public Product update(Product product) {
+		 Optional<Product> optional=productRepository.findById(product.getProductId());
+		
+		  Product tempProduct=optional.get();
+		  tempProduct.setName(product.getName());
+		  tempProduct.setPrice(product.getPrice());
+		  tempProduct.setDescription(product.getDescription());
+		  tempProduct.setQty(product.getQty());
+		 return productRepository.save(tempProduct); 
+		 }
+		
+	 
 	 public void deleteProduct(long productId) 
 	 { productRepository.deleteById(productId); }
+
+
+	public Optional<Product> findyById(long productId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	
 	
 }

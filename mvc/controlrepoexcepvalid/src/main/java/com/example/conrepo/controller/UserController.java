@@ -50,12 +50,12 @@ public class UserController {
 	 
 	}
 	@DeleteMapping("/Delete/{id}")
-	public ResponseEntity<?>deleteuser(@PathVariable int id){
+	public ResponseEntity<String>deleteuser(@PathVariable int id){
 		Optional<User> opde=userepo.findById(id);
 		
 				if(opde.isPresent()) {
 					userepo.deleteById(id);
-					return ResponseEntity.ok().build();
+					return ResponseEntity.ok().body("Deleted");
 				}
 				else {
 					return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
